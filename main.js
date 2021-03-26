@@ -83,3 +83,39 @@ function my_keydown(e){
         console.log("e");
     }
 }
+function up(){
+    if(player_y>=0){
+        player_y=player_y-superhero_image_height;
+        console.log("superhero image height="+superhero_image_height);
+        console.log("when up arrow key is pressed, X="+player_x+"Y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function down(){
+    if(player_y<=500){
+        player_y=player_y+superhero_image_height;
+        console.log("superhero image height="+superhero_image_height);
+        console.log("when down arrow key is pressed, X="+player_x+"Y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function left(){
+    if(player_x>=0){
+        player_x=player_x-superhero_image_width;
+        console.log("superhero image width="+superhero_image_width);
+        console.log("when left arrow is pressed, X="+player_x+"Y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function right(){
+    if(player_x<=850){
+        player_x=player_x+superhero_image_width;
+        console.log("superhero_image_width="+superhero_image_width);
+        console.log("when right arrow is pressed, X="+player_x+"Y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
